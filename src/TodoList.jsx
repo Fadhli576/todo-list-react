@@ -7,7 +7,7 @@ const TodoList = (props) => {
             return (
             <div className="todo-item" key={todo.id}>
               <div className="todo-desc">
-                <button id={todo.id} onClick={props.handleStatus} className={todo.status == 'completed' ? 'checkbox completed' : 'checkbox'}></button>
+                <button id={todo.id} onClick={props.handleStatus} className={todo.status === 'completed' ? 'checkbox completed' : 'checkbox'}></button>
                 <div className="todo-specific">
                   <h4>{todo.title}</h4>
                   <p>{todo.status}</p>
