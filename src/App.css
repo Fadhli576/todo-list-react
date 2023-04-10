@@ -1,38 +1,176 @@
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.action {
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo {
+  width: 660px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #DDFFBB;
+  border-radius: 10px;
+}
+
+button {
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #C7E9B0;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #B3C99C;
+}
+
+select {
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #C7E9B0;
+  border: none;
+  padding: 2px;
+}
+
+.todo-action {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-desc {
+  display: flex;
+  align-items: center;
+}
+
+.todo-specific {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  flex-direction: column;
+}
+
+.todo-specific h4{
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.checkbox {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+
+.completed {
+  background-color: #9CFF2E;
+}
+
+.completed:hover {
+  background-color: #9CFF2E;
+}
+
+
+.modol {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  font-size: 20px;
+}
+
+.modol2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  font-size: 20px;
+}
+
+.centering {
+  position: absolute;
+  width: 100vw;
+  height: 166vh;
+  background-color: black;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  opacity: 50%;
+}
+
+.d-none {
+  display: block;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+
+.gap {
+  margin: 10px;
+}
+
+input {
+  border: none;
+  background-color: #C7E9B0;
+  height: 20px;
+  border-radius: 5px;
+}
+
+h2 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
