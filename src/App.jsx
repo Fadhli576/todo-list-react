@@ -47,7 +47,7 @@ function App() {
   function handleTodo2(e) {
     let todoOld = window.localStorage.getItem('TodoData')
     let todoOldArr = JSON.parse(todoOld)
-    let index = todoOldArr.findIndex((todo) => todo.id === e.currentTarget.id)
+    let index = todoOldArr.findIndex((todo) => todo.id == e.currentTarget.id)
     let modol2 = document.getElementById('modol2')
 
     modol2.classList.add("d-none")
@@ -89,18 +89,18 @@ function App() {
 function handleStatus(e) {
   const todoOld = window.localStorage.getItem('TodoData')
   const todoOldArr = JSON.parse(todoOld)
-  const index = todoOldArr.findIndex((todo) => todo.id === e.currentTarget.id)
+  const index = todoOldArr.findIndex((todo) => todo.id == e.currentTarget.id)
   let status = e.target
   status.classList.toggle('completed')
 
 
-  if (e.target.className === "checkbox completed") {
+  if (e.target.className == "checkbox completed") {
     todoOldArr[index] = {
       id : Math.floor(Math.random() * 10000),
       title : todoOldArr[index].title,
       status : "completed"
     }
-  } else if(e.target.className === "checkbox") {
+  } else if(e.target.className == "checkbox") {
     todoOldArr[index] = {
       id : Math.floor(Math.random() * 10000),
       title : todoOldArr[index].title,
