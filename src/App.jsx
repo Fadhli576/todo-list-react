@@ -24,7 +24,7 @@ function App() {
   function handleTodoDelete(e) {
     const todoOld = window.localStorage.getItem('TodoData')
     const todoOldArr = JSON.parse(todoOld)
-    const index = todoOldArr.findIndex((todo) => todo.id === e.currentTarget.id)
+    const index = todoOldArr.findIndex((todo) => todo.id === Number(e.currentTarget.id))
 
     todoOldArr.splice(index, 1)
    
@@ -47,7 +47,7 @@ function App() {
   function handleTodo2(e) {
     let todoOld = window.localStorage.getItem('TodoData')
     let todoOldArr = JSON.parse(todoOld)
-    let index = todoOldArr.findIndex((todo) => todo.id == e.currentTarget.id)
+    let index = todoOldArr.findIndex((todo) => todo.id === Number(e.currentTarget.id))
     let modol2 = document.getElementById('modol2')
 
     modol2.classList.add("d-none")
@@ -89,7 +89,7 @@ function App() {
 function handleStatus(e) {
   const todoOld = window.localStorage.getItem('TodoData')
   const todoOldArr = JSON.parse(todoOld)
-  const index = todoOldArr.findIndex((todo) => todo.id == e.currentTarget.id)
+  const index = todoOldArr.findIndex((todo) => todo.id === Number(e.currentTarget.id))
   let status = e.target
   status.classList.toggle('completed')
 
