@@ -94,13 +94,13 @@ function handleStatus(e) {
   status.classList.toggle('completed')
 
 
-  if (e.target.className == "checkbox completed") {
+  if (e.target.className === "checkbox completed") {
     todoOldArr[index] = {
       id : Math.floor(Math.random() * 10000),
       title : todoOldArr[index].title,
       status : "completed"
     }
-  } else if(e.target.className == "checkbox") {
+  } else if(e.target.className === "checkbox") {
     todoOldArr[index] = {
       id : Math.floor(Math.random() * 10000),
       title : todoOldArr[index].title,
