@@ -21,7 +21,8 @@ const Create = (props) => {
           <div className="gap"></div>
 
           <label htmlFor="status">Status</label>
-          <select name="" id="status" value={props.getStatus} onChange={event => props.setStatus(event.target.value)} >
+          <select required name="" id="status" value={props.getStatus} onChange={event => props.setStatus(event.target.value)} >
+            <option selected disabled value="">Pilih Opsi</option>
             <option value="completed">completed</option>
             <option value="uncompleted">uncompleted</option>
         </select>
