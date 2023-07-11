@@ -6,13 +6,15 @@
 }
 
 .action {
-  width: 700px;
+  width: 100vw;
+  max-width: 700px;
   display: flex;
   justify-content: space-between;
 }
 
 .todo {
-  width: 660px;
+  width: 100vw;
+  max-width: 660px;
   padding: 20px;
   margin: 20px;
   background-color: #DDFFBB;
@@ -153,10 +155,10 @@ form {
   justify-content: center;
   flex-direction: column;
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15vh auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 30%; /* Could be more or less, depending on screen size */
+  width: 50%; /* Could be more or less, depending on screen size */
 }
 
 .gap {
